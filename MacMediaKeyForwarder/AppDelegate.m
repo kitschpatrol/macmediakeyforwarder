@@ -337,8 +337,8 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
 
     [ menu addItem : [ NSMenuItem separatorItem ] ]; // A thin grey line
     
-    [ menu addItemWithTitle : NSLocalizedString(@"Donate if you like the app", @"Donate if you like the app") action : @selector(support) keyEquivalent : @"" ];
-    [ menu addItemWithTitle : NSLocalizedString(@"Check for updates", @"Check for updates") action : @selector(update) keyEquivalent : @"" ];
+//    [ menu addItemWithTitle : NSLocalizedString(@"Donate if you like the app", @"Donate if you like the app") action : @selector(support) keyEquivalent : @"" ];
+//    [ menu addItemWithTitle : NSLocalizedString(@"Check for updates", @"Check for updates") action : @selector(update) keyEquivalent : @"" ];
     [ menu addItemWithTitle : NSLocalizedString(@"Quit", @"Quit") action : @selector(terminate) keyEquivalent : @"" ];
     
     NSImage* image = [ NSImage imageNamed : @"icon" ];
@@ -439,15 +439,15 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
     [ NSApp terminate : nil ];
 }
 
-- ( void ) support
-{
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://paypal.me/milgra"]];
-}
-
-- ( void ) update
-{
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"http://milgra.com/mac-media-key-forwarder.html"]];
-}
+//- ( void ) support
+//{
+//    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://paypal.me/milgra"]];
+//}
+//
+//- ( void ) update
+//{
+//    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"http://milgra.com/mac-media-key-forwarder.html"]];
+//}
 
 
 #pragma mark - App priorization
