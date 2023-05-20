@@ -311,9 +311,8 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
     // Version string
     
     NSDictionary *bundleInfo = [[NSBundle mainBundle] infoDictionary];
-    NSString *versionString = [NSString stringWithFormat:@"Version %@ (build %@)",
-                               bundleInfo[@"CFBundleShortVersionString"],
-                               bundleInfo[@"CFBundleVersion"] ];
+    NSString *versionString = [NSString stringWithFormat:@"Version %@",
+                               bundleInfo[@"CFBundleShortVersionString"]];
     
     NSMenu *menu = [ [ NSMenu alloc ] init ];
     [ menu setDelegate : self ];
@@ -378,7 +377,7 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
 		
 		NSAlert *alert = [[NSAlert alloc] init];
 		[alert setMessageText:@"Error"];
-		[alert setInformativeText:@"Cannot start event listening. Please add Mac Media Key Forwarder to the \"Security & Privacy\" pane in System Preferences. Check \"Accessibility\" and \"Automation\" under the \"Privacy\" tab."];
+		[alert setInformativeText:@"Cannot start event listening. Please add Mac Media Key Forwarder to the \"Privacy & Security\" pane in System Settings. Check the \"Accessibility\" and \"Automation\" sections."];
 		[alert addButtonWithTitle:@"Ok"];
 		[alert runModal];
 
